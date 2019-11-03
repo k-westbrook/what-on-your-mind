@@ -1,26 +1,42 @@
 import React from 'react';
 import logo from './logo.svg';
+import axios from 'axios';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      comments: []
+    }
+  }
+
+  async getComments() {
+    let comments = await axios.get("https://hyn85bep64.execute-api.us-west-1.amazonaws.com/Prod");
+
+    this.setState({ comments: comments.data.body.comments })
+  };
+
+
+
+  render() {
+    this.getComments();
+    return (
+      <div className="App" >
+        <h5>What's on your mind?</h5>
+        {this.state.comments.map(comment => {
+          return (
+            <div>
+              {comment.category}: {comment.comment}
+            </div>
+          )
+        })
+
+        }
+
+      </div >
+    );
+  }
 }
 
 export default App;
