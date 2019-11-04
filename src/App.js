@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import axios from 'axios';
 import './App.css';
+import AddCommentForm from './AddCommentForm';
 
 class App extends React.Component {
   constructor() {
@@ -33,6 +34,9 @@ class App extends React.Component {
         })
 
         }
+        <div>
+          <AddCommentForm />
+        </div>
 
       </div >
     );
