@@ -29,13 +29,19 @@ class App extends React.Component {
     let date = `${dateObject.getMonth() + 1}/${dateObject.getDate()}/${dateObject.getFullYear()}`;
 
 
-    //let comment = await axios.post('https://qjc3b7wwnd.execute-api.us-west-1.amazonaws.com/Prod',{})
+    let commentResult = await axios.post('https://qjc3b7wwnd.execute-api.us-west-1.amazonaws.com/Prod', { category, comment, date: Date.now() });
+
+    console.log(commentResult.data.body.comment)
+
+  }
+  componentDidMount() {
+    this.getComments();
   }
 
 
 
   render() {
-    this.getComments();
+
     return (
       <div className="App" >
         <h5>What's on your mind?</h5>
