@@ -17,7 +17,9 @@ class App extends React.Component {
   async getComments() {
     let comments = await axios.get("https://hyn85bep64.execute-api.us-west-1.amazonaws.com/Prod");
 
-    this.setState({ comments: comments.data.body.comments })
+    let inOrder = comments.data.body.comments;
+    inOrder.sort(function (a, b) { return b.date - a.date });
+    this.setState({ comments: inOrder })
   };
 
   async postComment(evt) {
@@ -26,12 +28,14 @@ class App extends React.Component {
     let category = evt.target.category.value;
     let comment = evt.target.comment.value;
     let dateObject = new Date();
-    let date = `${dateObject.getMonth() + 1}/${dateObject.getDate()}/${dateObject.getFullYear()}`;
+    let printDate = `${dateObject.getMonth() + 1}/${dateObject.getDate()}/${dateObject.getFullYear()}`;
 
 
-    let commentResult = await axios.post('https://qjc3b7wwnd.execute-api.us-west-1.amazonaws.com/Prod', { category, comment, date: Date.now() });
+    let commentResult = await axios.post('https://qjc3b7wwnd.execute-api.us-west-1.amazonaws.com/Prod', { category, comment, date: Date.now(), printDate });
 
-    console.log(commentResult.data.body.comment)
+    let newComments = [...this.state.comments];
+    newComments.unshift(commentResult.data.body.comment);
+    this.setState({ comments: newComments })
 
   }
   componentDidMount() {
@@ -48,7 +52,7 @@ class App extends React.Component {
         {this.state.comments.map(comment => {
           return (
             <div>
-              {comment.category}: {comment.comment}
+              {comment.date} {comment.category}: {comment.comment}
             </div>
           )
         })
