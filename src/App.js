@@ -10,6 +10,8 @@ class App extends React.Component {
     this.state = {
       comments: []
     }
+    this.postComment = this.postComment.bind(this);
+    this.getComments = this.getComments.bind(this);
   }
 
   async getComments() {
@@ -17,6 +19,18 @@ class App extends React.Component {
 
     this.setState({ comments: comments.data.body.comments })
   };
+
+  async postComment(evt) {
+    evt.preventDefault();
+
+    let category = evt.target.category.value;
+    let comment = evt.target.comment.value;
+    let dateObject = new Date();
+    let date = `${dateObject.getMonth() + 1}/${dateObject.getDate()}/${dateObject.getFullYear()}`;
+
+
+    //let comment = await axios.post('https://qjc3b7wwnd.execute-api.us-west-1.amazonaws.com/Prod',{})
+  }
 
 
 
@@ -35,7 +49,7 @@ class App extends React.Component {
 
         }
         <div>
-          <AddCommentForm />
+          <AddCommentForm postComment={this.postComment} />
         </div>
 
       </div >

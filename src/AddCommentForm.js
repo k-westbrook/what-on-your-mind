@@ -9,9 +9,9 @@ class AddCommentForm extends React.Component {
 
     return (
       <div  >
-        <form>
+        <form onSubmit={this.props.postComment}>
           <label htmlFor='category'> Category</label>
-          <select>
+          <select name='category'>
             <option value='animals'>Animals</option>
             <option vale='people'>People</option>
             <option value='places'>Places</option>
@@ -19,7 +19,8 @@ class AddCommentForm extends React.Component {
             <option value='other'>Other</option>
           </select>
           <label htmlFor='comment'></label>
-          <input type='text' />
+          <input type='text' name='comment' />
+          <button>Add Comment</button>
         </form>
 
 
