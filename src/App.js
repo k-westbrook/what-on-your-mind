@@ -60,7 +60,7 @@ class App extends React.Component {
             {this.state.comments.map(comment => {
               return (
                 <div key={comment.comment_id}>
-                  {comment.date} {comment.category}: {comment.comment}
+                  {comment.printDate} {comment.category}: {comment.comment}
                 </div>
               )
             })
