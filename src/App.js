@@ -50,27 +50,28 @@ class App extends React.Component {
 
     return (
       <div className="App" >
-        <h5>What's on your mind?</h5>
+        <h2>What's on your mind?</h2>
         {(!this.state.loadedContent) ?
           <div>
             <p>Loading...</p>
           </div>
           :
           <div>
+            <div>
+              <AddCommentForm postComment={this.postComment} />
+            </div>
             <div className='table'>
-              <div className='table-headers'>
-                <div> Date</div>
-                <div> Category</div>
-                <div>Comment</div>
-              </div>
+
               {this.state.comments.map(comment => {
                 return (
                   <div key={comment.comment_id} className='table-values' >
                     <div className='column-box'>
-                      {comment.printDate}
-                    </div>
-                    <div className='column-box'>
-                      {comment.category}
+                      <div >
+                        {comment.printDate}
+                      </div>
+                      <div>
+                        {comment.category}
+                      </div>
                     </div>
                     <div className='column-box'>
                       {comment.comment}
@@ -81,9 +82,7 @@ class App extends React.Component {
 
               }
             </div>
-            <div>
-              <AddCommentForm postComment={this.postComment} />
-            </div>
+
           </div>
         }
       </div>
