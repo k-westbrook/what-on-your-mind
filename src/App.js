@@ -64,7 +64,7 @@ class App extends React.Component {
             </div>
             <div className='table'>
               <div className='table-header'>
-                <h2>Comments</h2>
+                <h2 className='table-header-item'>Comments</h2>
               </div>
 
               {this.state.comments.map(comment => {
@@ -72,7 +72,7 @@ class App extends React.Component {
                   <div key={comment.comment_id} className='table-values' >
                     <div className='column-box'>
                       <div >
-                        <p>{comment.printDate}</p>
+                        <p><b>{comment.printDate}</b></p>
                       </div>
                       <div>
                         <p>{comment.category}</p>

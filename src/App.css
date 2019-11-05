@@ -35,16 +35,22 @@
   font-size: 3vw;
   font-family: 'Vidaloka', serif;
 }
+.table-header-item
+{
+  margin:0vh;
+}
 
 .table-values
 {
   display: flex;
   justify-content: space-between;
+  font-size: 4.5vh;
+
 }
 .column-box
 {
  width: 50vw;
- height: 10vh;
+ height: 20vh;
 }
 
 .form-container
