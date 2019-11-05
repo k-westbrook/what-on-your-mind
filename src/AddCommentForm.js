@@ -29,8 +29,8 @@ class AddCommentForm extends React.Component {
               <div className='category-label'>
                 <label htmlFor='comment'>Comment</label>
               </div>
-              <div className='comment-group-container'>
-                <input type='text' name='comment' className='comment-box' />
+              <div >
+                <textarea name='comment' className='comment-box' />
               </div>
               <div >
                 <button className='submit-button'>Add Comment</button>

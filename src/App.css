@@ -64,16 +64,16 @@ font-size: 5vh;
   display:flex;
   margin-right:3vw;
   padding:1vh;
-  background-color: pink;
   align-items: baseline;
 }
 
 .comment-group-container
 {
-  display:flex;
-  padding:1vh;
-  background-color: blue;
-  align-items: baseline;
+  padding: 1vh;
+  margin-right: 2vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .category-label
@@ -95,16 +95,13 @@ font-size: 5vh;
   font-size: 3vh;
 }
 
-.comment-group-container
-{
-  padding: 1vh;
-  margin-right: 2vw;
-}
 
 .comment-box
 {
   width: 20vw;
   height: 20vh;
+font-size: 3vh;
+margin-right: 2vw;
 }
 
 .submit-button
