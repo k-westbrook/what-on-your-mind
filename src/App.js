@@ -8,7 +8,8 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      comments: []
+      comments: [],
+      loadedContent: false
     }
     this.postComment = this.postComment.bind(this);
     this.getComments = this.getComments.bind(this);
@@ -40,6 +41,7 @@ class App extends React.Component {
   }
   componentDidMount() {
     this.getComments();
+    this.setState({ loadedContent: true })
   }
 
 
@@ -49,21 +51,31 @@ class App extends React.Component {
     return (
       <div className="App" >
         <h5>What's on your mind?</h5>
-        {this.state.comments.map(comment => {
-          return (
+        {(!this.state.loadedContent) ?
+          <div>
+            <p>Loading...</p>
+          </div>
+          :
+          <div>
+            {this.state.comments.map(comment => {
+              return (
+                <div key={comment.comment_id}>
+                  {comment.date} {comment.category}: {comment.comment}
+                </div>
+              )
+            })
+
+            }
             <div>
-              {comment.date} {comment.category}: {comment.comment}
+              <AddCommentForm postComment={this.postComment} />
             </div>
-          )
-        })
-
+          </div>
         }
-        <div>
-          <AddCommentForm postComment={this.postComment} />
-        </div>
+      </div>
 
-      </div >
     );
+
+
   }
 }
 
