@@ -50,7 +50,9 @@ class App extends React.Component {
 
     return (
       <div className="App" >
-        <h2>What's on your mind?</h2>
+        <div className='app-title-header'>
+          <h2>What's on your mind?</h2>
+        </div>
         {(!this.state.loadedContent) ?
           <div>
             <p>Loading...</p>
@@ -67,14 +69,14 @@ class App extends React.Component {
                   <div key={comment.comment_id} className='table-values' >
                     <div className='column-box'>
                       <div >
-                        {comment.printDate}
+                        <p>{comment.printDate}</p>
                       </div>
                       <div>
-                        {comment.category}
+                        <p>{comment.category}</p>
                       </div>
                     </div>
                     <div className='column-box'>
-                      {comment.comment}
+                      <p>{comment.comment}</p>
                     </div>
                   </div>
                 )

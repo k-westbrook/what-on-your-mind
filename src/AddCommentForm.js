@@ -8,7 +8,7 @@ class AddCommentForm extends React.Component {
   render() {
 
     return (
-      <div  >
+      <div className='form-container' >
         <form onSubmit={this.props.postComment}>
           <label htmlFor='category'> Category</label>
           <select name='category'>

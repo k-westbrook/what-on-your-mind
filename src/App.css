@@ -39,3 +39,14 @@
  width: 50vw;
  height: 10vh;
 }
+
+.form-container
+{
+  width: 100vw;
+  height: 15vh;
+  border-style: double;
+}
+.app-title-header
+{
+border-style: dotted;
+}
