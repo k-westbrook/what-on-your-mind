@@ -12,11 +12,11 @@ class AddCommentForm extends React.Component {
         <form onSubmit={this.props.postComment}>
           <div className='form-container'>
             <div className='category-group-container'>
-              <div>
+              <div className='category-label'>
                 <label htmlFor='category'> Category</label>
               </div>
-              <div>
-                <select name='category'>
+              <div className='category-selector-container'>
+                <select name='category' className='category-selector'>
                   <option value='animals'>Animals</option>
                   <option vale='people'>People</option>
                   <option value='places'>Places</option>

@@ -62,9 +62,34 @@ font-size: 5vh;
 .category-group-container
 {
   display:flex;
+  margin-right:3vw;
+  padding:1vh;
+  background-color: pink;
+  align-items: baseline;
 }
 
 .comment-group-container
 {
   display:flex;
+  padding:1vh;
+  background-color: blue;
+}
+
+.category-label
+{
+  font-size: 3vh;
+  padding:1vh;
+  margin-right: 4vw;
+}
+
+.category-selector-container
+{
+  padding:1vh;
+}
+
+.category-selector
+{
+  width: 15vw;
+  height:5vh;
+  font-size: 3vh;
 }
