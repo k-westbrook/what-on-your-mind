@@ -26,14 +26,14 @@ class AddCommentForm extends React.Component {
               </div>
             </div>
             <div className='comment-group-container'>
-              <div>
+              <div className='category-label'>
                 <label htmlFor='comment'>Comment</label>
               </div>
-              <div>
-                <input type='text' name='comment' />
+              <div className='comment-group-container'>
+                <input type='text' name='comment' className='comment-box' />
               </div>
-              <div>
-                <button>Add Comment</button>
+              <div >
+                <button className='submit-button'>Add Comment</button>
               </div>
             </div>
           </div>

@@ -44,7 +44,7 @@
 .form-container
 {
   width: 100vw;
-  height: 15vh;
+  height: 35vh;
   border-style: double;
   display:flex;
   flex-direction: row;
@@ -73,6 +73,7 @@ font-size: 5vh;
   display:flex;
   padding:1vh;
   background-color: blue;
+  align-items: baseline;
 }
 
 .category-label
@@ -91,5 +92,25 @@ font-size: 5vh;
 {
   width: 15vw;
   height:5vh;
+  font-size: 3vh;
+}
+
+.comment-group-container
+{
+  padding: 1vh;
+  margin-right: 2vw;
+}
+
+.comment-box
+{
+  width: 20vw;
+  height: 20vh;
+}
+
+.submit-button
+{
+  width: 10vw;
+  height:10vh;
+  margin-right: 2vw;
   font-size: 3vh;
 }
