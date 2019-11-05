@@ -57,10 +57,24 @@ class App extends React.Component {
           </div>
           :
           <div>
+
+            <div >
+              <div> Date</div>
+              <div> Category</div>
+              <div>Comemnt</div>
+            </div>
             {this.state.comments.map(comment => {
               return (
-                <div key={comment.comment_id}>
-                  {comment.printDate} {comment.category}: {comment.comment}
+                <div key={comment.comment_id} >
+                  <div>
+                    {comment.printDate}
+                  </div>
+                  <div>
+                    {comment.category}
+                  </div>
+                  <div>
+                    {comment.comment}
+                  </div>
                 </div>
               )
             })
