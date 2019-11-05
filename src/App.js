@@ -64,7 +64,7 @@ class App extends React.Component {
             </div>
             <div className='table'>
               <div className='table-header'>
-                <h3>Comments</h3>
+                <h2>Comments</h2>
               </div>
 
               {this.state.comments.map(comment => {

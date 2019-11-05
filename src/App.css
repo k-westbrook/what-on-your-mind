@@ -32,7 +32,8 @@
 
 .table-header
 {
-  font-size: 2vw;
+  font-size: 3vw;
+  font-family: 'Vidaloka', serif;
 }
 
 .table-values
@@ -49,10 +50,10 @@
 .form-container
 {
   width: 100vw;
-  height: 35vh;
+  height: 25vh;
   display:flex;
   flex-direction: row;
-  align-items: center;
+padding: 5vh;
   justify-content: center;
   border-top-style: solid;
   border-bottom-style: solid;
@@ -61,7 +62,7 @@
 .app-title-header
 {
 font-family: 'Vidaloka', serif;
-font-size: 5vh;
+font-size: 3vw;
 }
 
 .category-group-container
@@ -69,7 +70,6 @@ font-size: 5vh;
   display:flex;
   margin-right:3vw;
   padding:1vh;
-  align-items: baseline;
 }
 
 .comment-group-container
@@ -77,7 +77,7 @@ font-size: 5vh;
   padding: 1vh;
   margin-right: 2vw;
   display: flex;
-  align-items: center;
+
   justify-content: center;
 }
 
