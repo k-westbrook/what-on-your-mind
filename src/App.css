@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: 'Roboto', sans-serif;
 }
 
 .App-logo {
@@ -45,10 +46,25 @@
   width: 100vw;
   height: 15vh;
   border-style: double;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
 }
 .app-title-header
 {
 border-style: dotted;
 font-family: 'Vidaloka', serif;
+font-size: 5vh;
+}
 
+.category-group-container
+{
+  display:flex;
+}
+
+.comment-group-container
+{
+  display:flex;
 }
