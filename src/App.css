@@ -26,8 +26,14 @@
 {
   display: flex;
   flex-direction: column;
+  padding:2vh;
+  margin-top: 1vh;
 }
 
+.table-header
+{
+  font-size: 2vw;
+}
 
 .table-values
 {
@@ -36,7 +42,6 @@
 }
 .column-box
 {
- border-style: solid;
  width: 50vw;
  height: 10vh;
 }
@@ -45,16 +50,16 @@
 {
   width: 100vw;
   height: 35vh;
-  border-style: double;
   display:flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  border-top-style: solid;
+  border-bottom-style: solid;
 
 }
 .app-title-header
 {
-border-style: dotted;
 font-family: 'Vidaloka', serif;
 font-size: 5vh;
 }
@@ -102,6 +107,7 @@ font-size: 5vh;
   height: 20vh;
 font-size: 3vh;
 margin-right: 2vw;
+
 }
 
 .submit-button

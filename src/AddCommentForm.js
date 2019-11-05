@@ -5,6 +5,7 @@ import './App.css';
 
 class AddCommentForm extends React.Component {
 
+
   render() {
 
     return (
@@ -30,7 +31,7 @@ class AddCommentForm extends React.Component {
                 <label htmlFor='comment'>Comment</label>
               </div>
               <div >
-                <textarea name='comment' className='comment-box' />
+                <textarea name='comment' className='comment-box' required maxLength='250' />
               </div>
               <div >
                 <button className='submit-button'>Add Comment</button>

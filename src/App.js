@@ -63,6 +63,9 @@ class App extends React.Component {
               <AddCommentForm postComment={this.postComment} />
             </div>
             <div className='table'>
+              <div className='table-header'>
+                <h3>Comments</h3>
+              </div>
 
               {this.state.comments.map(comment => {
                 return (
