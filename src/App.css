@@ -20,3 +20,26 @@
 .App-link {
   color: #09d3ac;
 }
+
+.table
+{
+  display: flex;
+  flex-direction: column;
+}
+.table-headers
+{
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.table-values
+{
+  display: flex;
+  justify-content: space-between;
+}
+.column-box
+{
+ border-style: solid;
+ width: 33vw;
+}

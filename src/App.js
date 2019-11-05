@@ -57,29 +57,30 @@ class App extends React.Component {
           </div>
           :
           <div>
+            <div className='table'>
+              <div className='table-headers'>
+                <div> Date</div>
+                <div> Category</div>
+                <div>Comment</div>
+              </div>
+              {this.state.comments.map(comment => {
+                return (
+                  <div key={comment.comment_id} className='table-values' >
+                    <div className='column-box'>
+                      {comment.printDate}
+                    </div>
+                    <div className='column-box'>
+                      {comment.category}
+                    </div>
+                    <div className='column-box'>
+                      {comment.comment}
+                    </div>
+                  </div>
+                )
+              })
 
-            <div >
-              <div> Date</div>
-              <div> Category</div>
-              <div>Comemnt</div>
+              }
             </div>
-            {this.state.comments.map(comment => {
-              return (
-                <div key={comment.comment_id} >
-                  <div>
-                    {comment.printDate}
-                  </div>
-                  <div>
-                    {comment.category}
-                  </div>
-                  <div>
-                    {comment.comment}
-                  </div>
-                </div>
-              )
-            })
-
-            }
             <div>
               <AddCommentForm postComment={this.postComment} />
             </div>
