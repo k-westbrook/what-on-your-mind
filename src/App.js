@@ -21,6 +21,7 @@ class App extends React.Component {
     let inOrder = comments.data.body.comments;
     inOrder.sort(function (a, b) { return b.date - a.date });
     this.setState({ comments: inOrder })
+
   };
 
   async postComment(evt) {

@@ -134,7 +134,7 @@ padding:2vh;
 
 .comment-box
 {
-  width: 20vw;
+  min-width: 20vw;
   height: 20vh;
 font-size: 3vh;
 margin-right: 2vw;
@@ -143,10 +143,11 @@ margin-right: 2vw;
 
 .submit-button
 {
-  width: 10vw;
+  min-width: 10vw;
   height:10vh;
   margin-right: 2vw;
   font-size: 3vh;
+border-style:solid;
 }
 }
 
