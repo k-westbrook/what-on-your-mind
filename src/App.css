@@ -2,7 +2,9 @@
 .App {
   text-align: center;
   font-family: 'Roboto', sans-serif;
-
+  background-color: #013220;
+  padding-top:2.5vh;
+  padding-bottom:2.5vh;
 }
 
 .App-logo {
@@ -32,7 +34,7 @@
   margin-left:3vw;
   margin-right:3vw;
   margin-top:3vh;
-  background-color: white;
+  background-color: rgb(240, 235, 235);
 
 }
 .border
@@ -62,7 +64,6 @@
  width: 40vw;
  padding:5vw;
  height: 20vh;
- border-style: dashed;
 
 }
 
@@ -77,19 +78,19 @@
   text-align: center;
   border-top-style: solid;
   border-bottom-style: solid;
-  background-color: white;
+  background-color: rgb(240, 235, 235);
 
 }
 .app-title-header-container
 {
 margin-bottom: 5vh;
-background-color: white;
+background-color: rgb(240, 235, 235);
 
 }
 .app-title-header
 {
   font-family: 'Vidaloka', serif;
-font-size: 3vw;
+font-size: 5vw;
 margin:0vh;
 padding:2vh;
 
