@@ -2,6 +2,7 @@
 .App {
   text-align: center;
   font-family: 'Roboto', sans-serif;
+
 }
 
 .App-logo {
@@ -27,8 +28,16 @@
 {
   display: flex;
   flex-direction: column;
-  padding:2vh;
-  margin-top: 1vh;
+  margin-bottom: 3vh;
+  margin-left:3vw;
+  margin-right:3vw;
+  margin-top:3vh;
+  background-color: white;
+
+}
+.border
+{
+  background-color: #013220;
 }
 
 .table-header
@@ -50,8 +59,11 @@
 }
 .column-box
 {
- width: 50vw;
+ width: 40vw;
+ padding:5vw;
  height: 20vh;
+ border-style: dashed;
+
 }
 
 .form-container
@@ -60,16 +72,27 @@
   height: 25vh;
   display:flex;
   flex-direction: row;
-padding: 5vh;
+  padding: 5vh;
   justify-content: center;
+  text-align: center;
   border-top-style: solid;
   border-bottom-style: solid;
+  background-color: white;
+
+}
+.app-title-header-container
+{
+margin-bottom: 5vh;
+background-color: white;
 
 }
 .app-title-header
 {
-font-family: 'Vidaloka', serif;
+  font-family: 'Vidaloka', serif;
 font-size: 3vw;
+margin:0vh;
+padding:2vh;
+
 }
 
 .category-group-container

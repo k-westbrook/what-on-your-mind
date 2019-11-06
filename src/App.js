@@ -50,46 +50,50 @@ class App extends React.Component {
 
     return (
       <div className="App" >
-        <div className='app-title-header'>
-          <h2>What's on your mind?</h2>
-        </div>
-        {(!this.state.loadedContent) ?
-          <div>
-            <p>Loading...</p>
+        <div className='border'>
+          <div className='app-title-header-container'>
+            <h2 className='app-title-header'>What's on your mind?</h2>
           </div>
-          :
-          <div>
+          {(!this.state.loadedContent) ?
             <div>
-              <AddCommentForm postComment={this.postComment} />
+              <p>Loading...</p>
             </div>
-            <div className='table'>
-              <div className='table-header'>
-                <h2 className='table-header-item'>Comments</h2>
+            :
+            <div>
+              <div>
+                <AddCommentForm postComment={this.postComment} />
+              </div>
+              <div>
+                <div className='table'>
+                  <div className='table-header'>
+                    <h2 className='table-header-item'>Comments</h2>
+                  </div>
+
+                  {this.state.comments.map(comment => {
+                    return (
+                      <div key={comment.comment_id} className='table-values' >
+                        <div className='column-box'>
+                          <div >
+                            <p><b>{comment.printDate}</b></p>
+                          </div>
+                          <div>
+                            <p>{comment.category}</p>
+                          </div>
+                        </div>
+                        <div className='column-box'>
+                          <p>{comment.comment}</p>
+                        </div>
+                      </div>
+                    )
+                  })
+
+                  }
+                </div>
               </div>
 
-              {this.state.comments.map(comment => {
-                return (
-                  <div key={comment.comment_id} className='table-values' >
-                    <div className='column-box'>
-                      <div >
-                        <p><b>{comment.printDate}</b></p>
-                      </div>
-                      <div>
-                        <p>{comment.category}</p>
-                      </div>
-                    </div>
-                    <div className='column-box'>
-                      <p>{comment.comment}</p>
-                    </div>
-                  </div>
-                )
-              })
-
-              }
             </div>
-
-          </div>
-        }
+          }
+        </div>
       </div>
 
     );
