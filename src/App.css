@@ -170,7 +170,7 @@ border-style:solid;
     display: flex;
     flex-direction: column;
     padding:2vh;
-    margin-top: 1vh;
+    margin: 1vh;
 
     background-color: rgb(240, 235, 235);
   }
@@ -274,7 +274,7 @@ background-color: rgb(240, 235, 235);
 
   .comment-box
   {
-    width: 80vw;
+  width: 75vw;
     height: 20vh;
   font-size: 3vh;
   margin-right: 2vw;
