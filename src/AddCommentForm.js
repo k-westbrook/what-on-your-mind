@@ -5,9 +5,22 @@ import './App.css';
 
 class AddCommentForm extends React.Component {
 
+  constructor() {
+    super();
+    this.state =
+      {
+        characterCount: 0
+      }
+    this.handleCommentChange = this.handleCommentChange.bind(this);
+  }
+  handleCommentChange(evt) {
+    let characterCount = evt.target.value.length;
+
+    this.setState({ characterCount })
+  }
 
   render() {
-
+    console.log(this.state.characterCount)
     return (
       <div  >
         <form onSubmit={this.props.postComment}>
@@ -31,7 +44,12 @@ class AddCommentForm extends React.Component {
                 <label htmlFor='comment'>Comment</label>
               </div>
               <div >
-                <textarea name='comment' className='comment-box' required maxLength='250' />
+                <div>
+                  <textarea name='comment' className='comment-box' required maxLength='250' onChange={this.handleCommentChange} />
+                </div>
+                <div>
+                  <p>Characters Left: {250 - this.state.characterCount}</p>
+                </div>
               </div>
               <div >
                 <button className='submit-button'>Add Comment</button>
